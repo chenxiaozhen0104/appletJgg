@@ -1,0 +1,93 @@
+/* pages/basicInformation/repairArea/repairArea.wxss */
+
+.rA-container {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 30rpx;
+  color: #333;
+  padding: 30rpx;
+  position: relative;
+}
+
+.rA-selected {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 40rpx;
+  background-color: #fff;
+  padding: 10rpx;
+}
+
+.rA-title {
+  width: 100%;
+}
+
+.rA-title-text {
+  display: block;
+  height: 54rpx;
+  width: 120rpx;
+  border-bottom: 5rpx solid #4272ff;
+}
+
+.rA-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.rA-table {
+  width: 50%;
+  height: 740rpx;
+  /* border: 1px solid red; */
+  padding: 0 20rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.city {
+  height: auto;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.rA-row {
+  height: 90rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 0 30rpx;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.rA-row:last-child {
+  border-bottom: none;
+}
+
+.rA-row>image {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+/* 弹出框 */
+
+.toast {
+  padding: 20rpx 50rpx;
+  border-radius: 10px;
+  background-color: rgba(60, 60, 60, 0.6);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+}

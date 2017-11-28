@@ -1,0 +1,18 @@
+<view class="orderDone-container">
+  <form bindsubmit="formSubmit">
+    <view>
+      <view class="ctrl-group">
+        <text class="form-label">结束工作状态 :</text>
+        <view class="status-list">
+          <text wx:key="{{index}}" class="status-list-item {{selectStatus.val==item.val?'status-list-item-active':''}}" wx:for="{{status}}" bindtap="selectedItems" data-item="{{item}}">{{item.name}}</text>
+        </view>
+      </view>
+      <view class="ctrl-group">
+        <text class="form-label">备注：</text>
+        <textarea class="descript-text" placeholder="{{selectStatus.placeholder}}" name="textarea"></textarea>
+      </view>
+    </view>
+    <button class="orderDone-btn" formType="submit">{{selectStatus.submit}}</button>
+  </form>
+
+</view>

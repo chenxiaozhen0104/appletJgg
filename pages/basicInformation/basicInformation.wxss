@@ -1,0 +1,61 @@
+/* pages/basicInformation/basicInformation.wxss */
+
+.basic-container {
+  width: 100%;
+  padding-bottom: 20rpx;
+  background-color: #eee;
+  font-size: 14px;
+  color: #333;
+}
+
+.basic-content {
+  padding: 10rpx 20rpx;
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.bI-row {
+  min-height: 90rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  /* background-color: red; */
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.bI-row:last-child {
+  border: none;
+}
+
+.bI-row-left {
+  display: flex;
+  flex-direction: row;
+}
+
+.enterIn {
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 10rpx;
+}
+
+.basic-img {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.logo-img {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.basic-range {
+  width: 260rpx;
+  text-align: right;
+}
+
+.version {
+  width: 100%;
+  text-align: center;
+  margin: 20rpx 0;
+}

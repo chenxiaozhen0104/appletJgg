@@ -1,0 +1,38 @@
+<!--pages/home/home.wxml-->
+<view class='home-container'>
+  <view class='home-header'></view>
+  <view class='home-headerBottom'>
+    <view></view>
+    <view class='home-content'>
+      <view class='home-total'>今日统计</view>
+      <view class='home-ul'>
+        <view class='home-row'>
+          <image src="http://img.zmnbx.com//dist/Images/time.png" class='home-row-img'></image>
+          <view class='home-li'>
+            <view>在线时长</view>
+            <view class='home-right'>6.3小时</view>
+          </view>
+        </view>
+        <view class='home-row'>
+          <image src="http://img.zmnbx.com//dist/Images/accept.png" class='home-row-img'></image>
+          <view class='home-li'>
+            <view>接单量</view>
+            <view class='home-right'>6单</view>
+          </view>
+        </view>
+        <view class='home-row'>
+          <image src="http://img.zmnbx.com//dist/Images/money.png" class='home-row-img'></image>
+          <view class='home-li'>
+            <view>流水</view>
+            <view class='home-right'>1008元</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view animation="{{animationData}}" mode="scaleToFill" class='home-btn red' wx:if="{{!state}}" bindtap="changeState" data-num="180">接单</view>
+    <view animation="{{animationData}}" mode="scaleToFill" class='home-btn green' wx:if="{{state}}" bindtap="changeState" data-num="0">
+      <image src="{{url}}"></image>
+    </view>
+  </view>
+  <view class="toast" wx:if="{{isAccept}}">请到"我的"页面去添加维修技能和维修区域</view>
+</view>

@@ -1,0 +1,56 @@
+<view class="my-container">
+  <navigator class="my-logo" url="../../pages/basicInformation/basicInformation">
+    <view class="mylogo-box">
+      <image class="mylogo-img" src="{{userInfo.avatarUrl}}"></image>
+      <view class="mylogo-text">
+        <text>{{userInfo.nickName}}</text>
+        <text>{{userPhone}}</text>
+      </view>
+    </view>
+    <!-- <image class="listItem-img" src="http://img.zmnbx.com//dist/Images/go.png"></image> -->
+  </navigator>
+  <view class="my-list">
+    <navigator class="myList-item" url="../../pages/balance/balance">
+      <view class="listItem-text">
+        <view class="listItem-icon">
+          <icon class="iconfont icon-feiyong"></icon>
+          <text>余额</text>
+        </view>
+      </view>
+      <image class="listItem-img" src="http://img.zmnbx.com//dist/Images/go.png"></image>
+    </navigator>
+    <view class="myList-item" bindtap="repairSkill">
+      <view class="listItem-text">
+        <view class="listItem-icon">
+          <icon class="iconfont icon-jineng"></icon>
+          <text>维修技能</text>
+        </view>
+        <view class="listItem-skill">{{repairSkills}}</view>
+      </view>
+      <image class="listItem-img" src="http://img.zmnbx.com//dist/Images/go.png"></image>
+    </view>
+    <view class="myList-item myLast-item" bindtap="repairArea">
+      <view class="listItem-text">
+        <view class="listItem-icon">
+          <icon class="iconfont icon-quyu"></icon>
+          <text>维修区域</text>
+        </view>
+        <view class="listItem-skill">{{repairAreas}}</view>
+      </view>
+      <image class="listItem-img" src="http://img.zmnbx.com//dist/Images/go.png"></image>
+    </view>
+  </view>
+  <view class="my-list">
+    <navigator class="myList-item myLast-item" url="###">
+      <view class="listItem-text">
+        <view class="listItem-icon">
+          <icon class="iconfont icon-tongjibaobiao"></icon>
+          <text>工单统计</text>
+        </view>
+        <view></view>
+      </view>
+      <image class="listItem-img" src="http://img.zmnbx.com//dist/Images/go.png"></image>
+    </navigator>
+  </view>
+  <view class="toast" wx:if="{{showToast}}">请授权我们获取用户信息</view>
+</view>

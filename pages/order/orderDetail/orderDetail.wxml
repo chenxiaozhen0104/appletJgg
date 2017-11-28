@@ -1,0 +1,67 @@
+<view class="orderDetail-container">
+  <view class="orderDetail-content">
+    <view class="orderDetail-row">
+      <view class="orderDeatil-col order-number">
+        <text class="orderDetail-titleColor">单号：</text>
+        <text class="orderDeatail-text">{{orderDeatai.id}}</text>
+        <image class="orderStatus-img" src="{{orderStateEnum[orderDeatai.state+''].src}}"></image>
+      </view>
+    </view>
+    <view class="track-rcol">
+      <view class="track-list" wx:key="{{index}}" wx:for="{{timeLineContents}}">
+        <view class="time-style">
+          <view class="{{ index==0?'time-color':'time'}}">{{item.CreateTime}}</view>
+          <view class="{{ index==0?'time-color':'txt'}}">{{item.Content}}</view>
+        </view>
+        <image class="time-circle" src="{{index==0?'http://img.zmnbx.com//dist/Images/ciricleBlue.png':'http://img.zmnbx.com//dist/Images/circleGray.png'}}"></image>
+      </view>
+    </view>
+    <text class="orderDetail-title">工单信息</text>
+    <view class="orderDetail-row">
+      <!-- <view class="orderDeatil-col">
+        <text class="orderDetail-titleColor orderDetail-colTitle">工单级别：</text>
+        <view class="orderDeatail-text">普通工单</view>
+      </view> -->
+      <view class="orderDeatil-col">
+        <text class="orderDetail-titleColor orderDetail-colTitle">设备类型：</text>
+        <view class="orderDeatail-text">{{orderDeatai.categoryName}}</view>
+      </view>
+      <view class="orderDeatil-col">
+        <text class="orderDetail-titleColor orderDetail-colTitle">需求类型：</text>
+        <view class="orderDeatail-text">{{orderDeatai.type==1?'维修':'保养'}}</view>
+      </view>
+      <view class="orderDeatil-col">
+        <text class="orderDetail-titleColor orderDetail-colTitle">创建时间：</text>
+        <view class="orderDeatail-text">{{orderDeatai.createTime}}</view>
+      </view>
+      <view class="orderDeatil-col">
+        <text class="orderDetail-titleColor orderDetail-colTitle">需求描述：</text>
+        <view class="orderDeatail-text">{{orderDeatai.describe}}</view>
+      </view>
+    </view>
+    <text class="orderDetail-title">报修信息</text>
+    <view class="orderDetail-row">
+      <view class="orderDeatil-col">
+        <text class="orderDetail-titleColor orderDetail-colTitle">地址：</text>
+        <view class="orderDeatail-text">{{orderDeatai.address}}</view>
+      </view>
+      <view class="orderDeatil-col">
+        <text class="orderDetail-titleColor orderDetail-colTitle">联系人：</text>
+        <view class="orderDeatail-text">{{orderDeatai.contacts}}</view>
+      </view>
+      <view class="orderDeatil-col">
+        <text class="orderDetail-titleColor orderDetail-colTitle">联系电话：</text>
+        <view class="orderDeatail-text orderDetail-phone" data-phone="13800000001" bindtap="callPhone">{{orderDeatai.contactsPhone}}</view>
+      </view>
+      <view class="orderDeatil-col">
+        <text class="orderDetail-titleColor orderDetail-colTitle">现场图片：</text>
+      </view>
+      <view class="orderDeatil-col">
+        <image class="orderDetail-imgList" wx:key="{{index}}" wx:for="{{orderDeatai.imgUrl}}" src="{{item.Url}}"></image>
+      </view>
+    </view>
+  </view>
+  <view class="orderDetail-footer" bindtap="orderDone" wx:if="{{showFooter}}">
+    <text class="footer-text">工作结束</text>
+  </view>
+</view>

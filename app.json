@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/login/login",
+    "pages/my/my",
+    "pages/order/order",
+    "pages/skills/skills",
+    "pages/repairArea/repairArea",
+    "pages/balance/balance",
+    "pages/order/orderDetail/orderDetail",
+    "pages/basicInformation/basicInformation",
+    "pages/order/orderDetail/workDone/workDone"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4272ff",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#dedede",
+    "selectedColor": "#4272ff",
+    "list": [
+      {
+        "selectedIconPath": "images/zmnbx2.0-homeBlue.png",
+        "iconPath": "images/zmnbx2.0-homeGray.png",
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/zmnbx2.0-orderBlue.png",
+        "iconPath": "images/zmnbx2.0-orderGray.png",
+        "pagePath": "pages/order/order",
+        "text": "工单"
+      },
+      {
+        "selectedIconPath": "images/zmnbx2.0-myBlue.png",
+        "iconPath": "images/zmnbx2.0-myGray.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  }
+}

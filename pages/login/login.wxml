@@ -1,0 +1,21 @@
+<!--pages/login/login.wxml-->
+<view class="login-container">
+  <view class='login-form'>
+    <view class='login-row'>
+      <image src="http://img.zmnbx.com//dist/Images/用户.png" class='login-icon'></image>
+      <input type="number" class="input-name" placeholder="请输入真实姓名" bindinput="nameinput" />
+    </view>
+    <view class='login-row'>
+      <image src="http://img.zmnbx.com//dist/Images/mobile.png" class='login-icon'></image>
+      <input type="number" class="input-name phone" placeholder="请输入手机号" maxlength="11" bindinput="phoneinput" />
+    </view>
+    <view class='login-row'>
+      <view class='login-sms'>
+        <image src="http://img.zmnbx.com//dist/Images/验证码.png" class='login-icon'></image>
+        <input type="number" class='input-name' placeholder="请输入验证码" bindinput="codeinput" />
+      </view>
+      <button class="login-getCode" disabled="{{disabled}}" bindtap="changeCode">{{btnCodeText}}</button>
+    </view>
+  </view>
+  <button class='login-btn' hover-class="btnHover" bindtap="bindPhone">绑定</button>
+</view>

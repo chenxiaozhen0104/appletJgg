@@ -1,0 +1,23 @@
+<!--pages/basicInformation/repairArea/repairArea.wxml-->
+<view class='rA-container'>
+  <view class='rA-selected' wx:if="{{AreaStr}}">{{AreaStr}}</view>
+  <view class='rA-title'>
+    <text class='rA-title-text'>区域选择</text>
+  </view>
+  <view class='rA-content'>
+    <scroll-view scroll-y class='rA-table' bindscrolltolower="lower">
+      <view class='rA-row' wx:key="name" wx:for="{{areas}}" bindtap="selectPro" data-item="{{item}}">
+        <text>{{item.Name}}</text>
+        <image src="http://img.zmnbx.com//dist/Images/zmnbx2.0.1-orderChecked.png" wx:if="{{item.isSelected}}"></image>
+      </view>
+    </scroll-view>
+    <scroll-view scroll-y class='rA-table city' bindscrolltolower="lower" wx:if="{{showCity}}">
+      <view class='rA-row' wx:key="name" wx:for="{{areaCity}}" bindtap="selectCity" data-item="{{item}}">
+        <text>{{item.Name}}</text>
+        <image src="http://img.zmnbx.com//dist/Images/zmnbx2.0.1-orderChecked.png" wx:if="{{item.isSelected}}"></image>
+      </view>
+    </scroll-view>
+  </view>
+  <button class='common-btn' bindtap="save">保存</button>
+  <view class="toast" hidden="{{hiddenToast}}" duration="1000" bindchange="toastHidden">没有更多了</view>
+</view>

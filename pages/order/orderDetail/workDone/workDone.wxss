@@ -1,0 +1,58 @@
+/* pages/order/orderDetail/workDone/workDone.wxss */
+
+.orderDone-container {
+  min-height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+
+.orderDone-btn {
+  margin-left: 20rpx;
+  width: 715rpx;
+  background-color: #4272ff;
+  text-align: center;
+  margin-top: 50rpx;
+  color: #fff;
+  font-size: 32rpx;
+  border-radius: 5rpx;
+}
+
+.ctrl-group {
+  margin-top: 30rpx;
+  padding: 0 20rpx;
+  font-size: 33rpx;
+}
+
+.descript-text {
+  width: 680rpx;
+  margin-top: 20rpx;
+  padding: 10px 8px;
+  height: 280rpx;
+  border-color: #c0c0c0;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.status-list {
+  padding-top: 30rpx;
+  flex-direction: row;
+  padding: 20rpx 20rpx;
+}
+
+.status-list-item {
+  display: inline-block;
+  height: 45rpx;
+  padding: 13rpx 65rpx;
+  text-align: center;
+  line-height: 45rpx;
+  border: 1px solid #4272ff;
+}
+
+.status-list-item-active {
+  color: #fff;
+  background-color: #4272ff;
+}
+
+.orderDone-btn:active {
+  opacity: 0.7;
+}

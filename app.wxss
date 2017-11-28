@@ -1,0 +1,95 @@
+/**app.wxss**/
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+button::after {
+  width: auto;
+  height: auto;
+}
+
+input, button {
+  border: none;
+  outline: none;
+}
+
+page {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+}
+
+/*字体矢量图 */
+
+@font-face {
+  font-family: 'iconfont'; /* project id 390990 */
+  src: url('//at.alicdn.com/t/font_390990_g92jmfgramnjc3di.eot');
+  src: url('//at.alicdn.com/t/font_390990_g92jmfgramnjc3di.eot?#iefix') format('embedded-opentype'),
+         url('//at.alicdn.com/t/font_390990_g92jmfgramnjc3di.woff') format('woff'),
+         url('//at.alicdn.com/t/font_390990_g92jmfgramnjc3di.ttf') format('truetype'),
+         url('//at.alicdn.com/t/font_390990_g92jmfgramnjc3di.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-feiyong:before {
+  content: "\e609";
+  font-size: 45rpx;
+  color: #4272ff;
+  margin-right: 15rpx;
+}
+
+.icon-jineng:before {
+  content: "\e742";
+  font-size: 45rpx;
+  color: #ff9f50;
+  margin-right: 15rpx;
+}
+
+.icon-quyu:before {
+  content: "\e688";
+  font-size: 45rpx;
+  color: #f3ab10;
+  margin-right: 15rpx;
+}
+
+.icon-tongjibaobiao:before {
+  content: "\e640";
+  font-size: 45rpx;
+  color: #4091e5;
+  margin-right: 15rpx;
+}
+
+/* 公共样式 */
+
+.common-btn {
+  width: 670rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #4272ff;
+  border-radius: 10px;
+  margin-top: 56rpx;
+  margin-bottom: 30rpx;
+  opacity: 1;
+  color: #fff;
+  font-size: 30rpx;
+}
+
+.common-btn:active {
+  opacity: 0.8;
+}

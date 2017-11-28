@@ -1,0 +1,165 @@
+/* pages/order/order.wxss */
+
+.order-container {
+  min-height: 100%;
+  width: 100%;
+}
+
+.order-headerBox {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  z-index: 10;
+}
+
+.order-header {
+  height: 85rpx;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 32rpx;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.orderHeader-item {
+  flex: 1;
+  height: 85rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-yesImg {
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 10rpx;
+  transform: rotate(180deg);
+  transition: all 550ms;
+}
+
+.order-noImg {
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 10rpx;
+  transform: rotate(-0deg);
+  transition: all 550ms;
+}
+
+.order-tabActice {
+  border-bottom-color: #3879d9;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  color: #3879d9;
+}
+
+.orderState-item {
+  display: flex;
+  height: 80rpx;
+  padding: 0 45rpx 0 25rpx;
+  align-items: center;
+  background-color: #fff;
+  justify-content: space-between;
+  font-size: 32rpx;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.text-Actice {
+  color: #3879d9;
+}
+
+.order-itemChecked {
+  width: 40rpx;
+  height: 25rpx;
+}
+
+.order-list {
+  box-sizing: border-box;
+  padding:105rpx 15rpx 0rpx 15rpx;
+}
+
+.orderList-item {
+  position: relative;
+  background-color: #fff;
+  font-size: 30rpx;
+  padding-top: 20rpx;
+  padding-bottom: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.orderList-itemRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0rpx 8rpx 10rpx 8rpx;
+}
+
+.orderList-itemBorder {
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 15rpx;
+}
+
+.orderListItem-top {
+  padding-top: 10rpx;
+}
+
+.orderList-textColor {
+  color: #bdbdbd;
+}
+
+.orderList-titleColor {
+  color: #bdbdbd;
+  display: inline-block;
+  width: 145rpx;
+}
+
+.orderList-texts {
+  display: inline-block;
+  flex: 1;
+}
+
+.orderList-itemRowBox {
+  padding-bottom: 5rpx;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+
+.orderStatus-img {
+  width: 150rpx;
+  height: 70rpx;
+  position: absolute;
+  right: -5rpx;
+  top: 100rpx;
+}
+
+.loading-box {
+  padding-bottom: 20rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+}
+
+.loading-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32rpx;
+}
+
+.loading-img {
+  animation: circle 1s infinite linear;
+  color: #4272ff;
+  margin-right: 15rpx;
+}
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(-360deg);
+  }
+}

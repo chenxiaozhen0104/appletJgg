@@ -1,0 +1,66 @@
+<view class="order-container">
+  <view class="order-headerBox">
+    <view class="order-header">
+      <view class="orderHeader-item {{menu.processing.isChoose?'order-tabActice':''}}" data-type="processing" bindtap="menuClick">
+        <text>进行中 ({{menu.processing.num}})</text>
+        <!-- <image class="{{showStatus?'order-yesImg':'order-noImg'}} " src="http://img.zmnbx.com//dist/Images/triangle.png"></image> -->
+      </view>
+      <view class="orderHeader-item {{menu.processed.isChoose?'order-tabActice':''}}" data-type="processed" bindtap="menuClick">已完成 ({{menu.processed.num}})</view>
+      <view class="orderHeader-item {{menu.all.isChoose?'order-tabActice':''}}" data-type="all" bindtap="menuClick">全部 ({{menu.all.num}})</view>
+    </view>
+    <view calss="order-stateList" wx:if="{{showStatus}}">
+      <view class="orderState-item" wx:key="{{index}}" wx:for="{{menu.processing.typeJudge}}" data-item="{{item}}" bindtap="orderStateItemClick">
+        <text decode="{{true}}" space="{{true}}" class="{{item.isSelect?'text-Actice':''}}">{{item.name}} &nbsp;{{'(' + item.num + ')'}}</text>
+        <image wx:if="{{item.isSelect}}" class="order-itemChecked" src="http://img.zmnbx.com//dist/Images/zmnbx2.0.1-orderChecked.png"></image>
+      </view>
+    </view>
+  </view>
+  <scroll-view class="order-list" scroll-y="true"  style="height:{{scrollViewHeight}}px;" lower-threshold="10" bindscrolltolower="loadMore">
+    <!-- <view class="loading-box" wx:if="{{hasRefesh}}">
+      <icon color="#4272ff" class="loading-img" type="waiting" size="30" />
+      <text>刷新中...</text>
+    </view> -->
+    <view class="orderList-item" wx:key="{{index}}" data-orderId="{{item.id}}" wx:for="{{orderData}}" bindtap="jumpDetail">
+      <view class="orderList-itemRow orderList-itemBorder">
+        <view class="orderList-itemRowBox ">
+          <text decode="{{true}}" space="{{true}}" class="orderList-textColor">工单:&nbsp;&nbsp;</text>
+          <text>{{item.id}}</text>
+        </view>
+        <text class="orderList-textColor">{{item.createTime}}</text>
+      </view>
+      <view class="orderList-itemRow">
+        <view class="orderList-itemRowBox orderListItem-top">
+          <text class="orderList-titleColor">工单级别:</text>
+          <text class="orderList-texts">{{item.level==1?'普通工单':'加急工单'}}</text>
+        </view>
+      </view>
+      <view class="orderList-itemRow">
+        <view class="orderList-itemRowBox  orderListItem-top">
+          <text class="orderList-titleColor">设备类型:</text>
+          <text class="orderList-texts">{{item.category==null?'暂无':item.category}}</text>
+        </view>
+      </view>
+      <view class="orderList-itemRow">
+        <view class="orderList-itemRowBox">
+          <text class="orderList-titleColor">需求类型:</text>
+          <text class="orderList-texts">{{item.type==1?'维修':'保养'}}</text>
+        </view>
+      </view>
+      <view class="orderList-itemRow">
+        <view class="orderList-itemRowBox">
+          <text class="orderList-titleColor">安装地址:</text>
+          <text class="orderList-texts">{{item.address}}</text>
+        </view>
+      </view>
+      <image class="orderStatus-img" src="{{orderStateEnum[item.state+''].src}}"></image>
+    </view>
+    <view wx:if="{{hasMore}}" class="loading-box">
+      <icon color="#4272ff" class="loading-img" type="waiting" size="30" />
+      <text>加载中...</text>
+    </view>
+    <view wx:if="{{hidden}}" class="loading-text">
+      <text>没有更多内容了</text>
+    </view>
+  </scroll-view>
+
+</view>

@@ -1,0 +1,144 @@
+/* pages/home/home.wxss */
+
+.home-container {
+  width: 100%;
+  min-height: 100%;
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.home-header {
+  height: 200rpx;
+  background: url('http://img.zmnbx.com//dist/Images/xcxhome-background2.png') no-repeat;
+  background-size: 100%, 100%;
+}
+
+.home-headerBottom {
+  padding: 0 50rpx;
+}
+
+.home-headerBottom>view:first-child {
+  height: 36rpx;
+  display: flex;
+  flex: 1;
+  background-color: #7c9dff;
+}
+
+.home-content {
+  height: 400rpx;
+  background-color: #fff;
+  border-bottom-left-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10rpx 50rpx;
+  box-shadow: 0 2px 18px 0 #b9d3fb;
+  border: 1px solid #ebf0ff;
+}
+
+.home-total {
+  height: 50rpx;
+  line-height: 50rpx;
+  padding-left: 20rpx;
+  font-size: 36rpx;
+  font-weight: inherit;
+  position: relative;
+}
+
+.home-total:before {
+  content: '';
+  display: block;
+  height: 36rpx;
+  width: 6rpx;
+  background-color: #4272ff;
+  position: absolute;
+  left: 0;
+  top: 7rpx;
+}
+
+.home-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 40rpx;
+}
+
+.home-li {
+  min-height: 90rpx;
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px dashed #ccc;
+  font-size: 32rpx;
+}
+
+.home-row:last-child .home-li {
+  border-bottom: none;
+}
+
+.home-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.home-row-img {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+
+.home-right {
+  color: #4272ff;
+}
+
+.home-btn {
+  margin: 0 auto;
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 160rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin-top: 100rpx;
+  font-size: 46rpx;
+}
+
+.red {
+  background-color: #f46f72;
+  box-shadow: 0 4px 30px 0 rgba(244, 111, 114, 1);
+}
+
+.green {
+  background-color: #88dfa6;
+  box-shadow: 0 4px 30px 0 rgba(136, 236, 166, 1);
+}
+
+.green image {
+  width: 90rpx;
+  height: 90rpx;
+}
+
+/* 授权获取用户信息 */
+
+.toast {
+  width: 600rpx;
+  height: 90rpx;
+  background-color: rgba(40, 40, 40, 0.6);
+  border-radius: 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 30rpx;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

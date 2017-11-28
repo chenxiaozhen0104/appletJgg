@@ -1,0 +1,15 @@
+<!--pages/basicInformation/skills/skills.wxml-->
+<view class='sk-container'>
+  <view class='sk-selected' wx:if="{{skillStr}}">{{skillStr}}</view>
+  <view class='sk-title'>
+    <text class='sk-title-text'>技能列表</text>
+  </view>
+  <scroll-view scroll-y class='sk-table' bindscrolltolower="lower">
+    <view class='sk-row' wx:key="name" wx:for="{{skills}}" bindtap="selectItem" data-item="{{item}}">
+      <text>{{item.Name}}</text>
+      <image src="http://img.zmnbx.com//dist/Images/zmnbx2.0.1-orderChecked.png" wx:if="{{item.isSelected}}"></image>
+    </view>
+  </scroll-view>
+  <button class='common-btn' bindtap="save">保存</button>
+  <view class="toast" hidden="{{hiddenToast}}" duration="1000" bindchange="toastHidden">没有更多了</view>
+</view>

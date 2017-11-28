@@ -1,0 +1,14 @@
+<!--pages/balance/balance.wxml-->
+<view class='balance-container'>
+  <view class='balance-num'>
+    <view class='balance-title'>余额账户（元）</view>
+    <view class='balance-money'>0.00</view>
+  </view>
+  <navigator class='balance-item'>
+      <view class='balance-itemText'>
+        <image class="balance-img" src="	http://img.zmnbx.com//dist/Images/cash.png"></image>
+        <text>提现</text>
+      </view>
+      <image class="balance-img" src="http://img.zmnbx.com//dist/Images/go.png"></image>
+    </navigator>
+</view>

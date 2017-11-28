@@ -1,0 +1,29 @@
+<!--pages/basicInformation/basicInformation.wxml-->
+<view class='basic-container'>
+  <view class='basic-content'>
+    <view class="bI-row">
+      <text class="basic-text">头像:</text>
+      <view class="basic-imgBox">
+        <image class="basic-img" src="{{imgUrl}}"></image>
+      </view>
+    </view>
+    <view class=" bI-row ">
+      <text class="basic-text ">用户名:</text>
+      <view class="basic-imgBox ">
+        <text class="basic-text ">{{userInfo.nickName}}</text>
+      </view>
+    </view>
+    <!-- <view class="bI-row ">
+      <text class="basic-text ">性别:</text>
+      <view class="basic-imgBox ">
+        <text class="basic-text ">{{userInfo.gender == 1 ? '男' : '女'}}</text>
+      </view>
+    </view> -->
+    <view class="bI-row ">
+      <text class="basic-text ">手机号:</text>
+      <view class="basic-imgBox ">
+        <text class="basic-text ">{{userPhone}}</text>
+      </view>
+    </view>
+  </view>
+</view>
